@@ -1,3 +1,7 @@
+package ArrayList;
+
+import ArrayList.MyArrayList;
+
 public class MySortedArrayList <E extends Comparable<E>> extends MyArrayList<E> {
 
     @Override
