@@ -36,9 +36,8 @@ public class MyDeck<T> {
             throw new RuntimeException();
         }
         size++;
-        list [nextIndexLeft(beginLeft)] = item;
         beginLeft = nextIndexLeft(beginLeft);
-
+        list [beginLeft] = item;
     }
 
     public T removeLeft () {
@@ -70,7 +69,7 @@ public class MyDeck<T> {
         if (isEmpty()) {
             throw new RuntimeException();
         }
-        return list [endRight - 1];
+        return list [nextIndexLeft(endRight)];
 
     }
 
@@ -92,7 +91,6 @@ public class MyDeck<T> {
             return list.length - 1;
         }
         return (index-1);
-
     }
 
     @Override
